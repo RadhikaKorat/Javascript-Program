@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThisKeyword</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <script>
+    const obj = {
+      fName: "Javathon",
+      lName: "thor",
+      fullName: function () {
+        console.log(this.fName + " " + this.lName);
+      }
+    }
+    obj.fullName();
+
+    // const obj2 = function () {
+    //   let name = "Javathon";
+    //   document.getElementById('demo').innerHTML(this.name);
+    // }
+    // console.log(this);
+
+    const obj1 = (a, b) => { return a + b };
+    console.log(obj1(3, 6));
+
+
+  </script>
+</body>
+
+</html>

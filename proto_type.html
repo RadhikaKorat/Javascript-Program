@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setPrototypeOf</title>
+</head>
+
+<body>
+  <script>
+    // let animal = {
+    //   isEats: true,
+
+    // };
+    // let rabbit = {
+    //   isEat: false,
+    // };
+
+    // Object.setPrototypeOf(rabbit, animal);
+    // console.log(rabbit.isEat);
+    // console.log(animal.isEats);
+
+
+
+    let obj = {
+      name: 'rabbit',
+      eat: "grass",
+      age: function (age) {
+        return age;
+      }
+    }
+
+    let obj2 = {
+      // eat: "Milk",
+      name: "cat",
+      __proto__: obj,
+    }
+
+    let obj3 = {
+      name: "Dog",
+      // eat: "biscuit",
+      __proto__: obj2,
+    }
+
+    console.log(obj3.eat);
+    console.log(obj3.age(2));
+
+
+
+
+    // obj = {
+    //   "1": "a",
+    //   1: "b",
+    //   [1]: "c"
+    // }
+    // console.log(["1"]);
+  </script>
+
+</body>
+
+</html>

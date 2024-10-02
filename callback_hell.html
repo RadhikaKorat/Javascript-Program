@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>callbackHell</title>
+</head>
+
+<body>
+  <script>
+
+    // function callback1(callback) {
+    //   setTimeout(() => {
+    //     console.log("Callback 1");
+    //   }, 1000)
+    // }
+
+    // function callback2(data, callback) {
+    //   setTimeout(() => {
+    //     console.log("Callback 2");
+    //   }, 3000)
+    // }
+
+    // function callback3(data, callback) {
+    //   setTimeout(() => {
+    //     console.log("Callback 3");
+    //   }, 2000)
+    // }
+
+
+    // callback1((callback1) => {
+    //   console.log(callback1);
+    //   callback2(callback1, (callback2) => {
+    //     console.log(callback2);
+    //     callback3(callback2, (callback3) => { console.log(callback3); })
+    //   })
+    // })
+
+
+    // Simulate asynchronous operations using setTimeout
+    function fetchData(callback) {
+      setTimeout(() => {
+        callback("Data fetched");
+      }, 1000);
+    }
+
+    function processData(data, callback) {
+      setTimeout(() => {
+        callback(data + " -> Data processed");
+      }, 1000);
+    }
+
+    function saveData(data, callback) {
+      setTimeout(() => {
+        callback(data + " -> Data saved");
+      }, 1000);
+    }
+
+    // Nested callbacks (Callback Hell)
+    fetchData((fetchedData) => {
+      console.log(fetchedData);
+      processData(fetchedData, (processedData) => {
+        console.log(processedData);
+        saveData(processedData, (savedData) => {
+          console.log(savedData);
+          // More nested callbacks can go here...
+        });
+      });
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html>

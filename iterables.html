@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iterables</title>
+</head>
+
+<body>
+  <p id="Demo"></p>
+  <!-- <script>
+
+    let name = ["a", "b", "c", "d", "e", "f", "g"];
+    for (const a of name) {
+      console.log(a);
+    }
+  </script> -->
+  <!-- <script>
+    let word = "Number";
+    for (const w of word) {
+      console.log(w);
+    }
+  </script> -->
+
+  <script>
+    myNumber = {};
+    myNumber[Symbol.iterator] = function () {
+      let num = 0;
+      done = false;
+      return {
+        next() {
+          num += 10;
+          if (num == 100) { done = true } {
+            return { value: num, done: done };
+          }
+        }
+      }
+    }
+    let text = "";
+    for (const n of myNumber) {
+      text += n + "\n";
+    }
+    console.log(text);
+  </script>
+
+</body>
+
+</html>

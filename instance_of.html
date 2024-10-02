@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstanceOf</title>
+</head>
+
+<body>
+
+  <script>
+
+    function Class(name, age, clg) {
+      this.name = name;
+      this.age = age;
+      this.clg = clg;
+    }
+
+    let obj = new Class("malti", 20, "howard");
+
+    console.log(obj instanceof Class);
+    console.log(obj instanceof Object);
+    console.log(obj instanceof String);
+
+
+
+  </script>
+
+</body>
+
+</html>

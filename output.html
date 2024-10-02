@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>With "use strict":</h2>
+  <h3>Using a variable without declaring it, is not allowed.</h3>
+
+  <p>Activate debugging in your browser (F12) to see the error report.</p>
+
+  <script>
+    "use strict";
+    var x = 3.14;  // This will cause an error (x is not defined).
+  </script>
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewKeyword</title>
+</head>
+
+<body>
+  <script>
+    function Fruit(color, test, seeds) {
+      this.color = color, this.test = test, this.seeds = seeds;
+    }
+
+    const fruit = new Fruit("Red", "sweet", 1);
+    console.log(fruit.color);
+
+    console.log(fruit.seeds);
+    console.log(fruit.test);
+  </script>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>__Proto__Demo</title>
+</head>
+
+<body>
+  <script>
+    let animal = {
+      isEats: true,
+    }
+    let rabbit = {
+      // isEat: false,
+    }
+    rabbit.__proto__ = animal;
+
+    console.log(rabbit.isEat);
+    console.log(animal.isEats);
+  </script>
+</body>
+
+</html>

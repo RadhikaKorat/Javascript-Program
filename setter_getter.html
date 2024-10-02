@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetterGetter</title>
+</head>
+
+<body>
+  <script>
+    var person = {
+      name: "Ashadeep",
+
+      get getMethod() {
+        return this.name;
+      },
+
+
+      set setMethod(fullName) {
+        const name = fullName.split(" ");
+        this.first = name[0];
+        this.last = name[1];
+
+      }
+      // set fullName(name) {
+      //   const parts = name.split(" ");
+      //   this.first = parts[0];
+      //   this.last = parts[1];
+      // },
+    };
+
+    console.log(person.getMethod);
+    // person.fullName = "Jane Smith";
+    // console.log(person.first); // "Jane" 
+    // console.log(person.last);
+
+    person.setMethod = "John Doe";
+    console.log(person.first);
+    console.log(person.last);
+
+  </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetterGetter</title>
+</head>
+
+<body>
+
+  <script>
+    var person = {
+      // name: "Radhika",
+      get getMethod() {
+        this.name = name
+        // console.log(person.getMethod);
+      },
+      set setMethod(myName) {
+        this.name = myName;
+
+      }
+    }
+    let text = person.setMethod = "Ashadeep";
+    console.log(person.name);
+
+  </script>
+</body>
+
+</html>

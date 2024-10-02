@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Json</title>
+</head>
+
+<body>
+  <script>
+    let data = {
+      "employee": [
+        { fName: "John", lName: "seenaa" },
+        { fName: "radhika", lName: "korat" },
+        { fName: "seenu", lName: "bhuri" }]
+    };
+    let stringData = JSON.stringify(data);
+    console.log(stringData);
+    let stringData2 = JSON.parse(stringData);
+    // console.log(stringData2);
+  </script>
+
+</body>
+
+</html>

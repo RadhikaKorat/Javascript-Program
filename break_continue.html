@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    let text = "";
+    for (let i = 0; i < 10; i++) {
+      if (i == 5) { break; }
+      text += "Number " + i + "\n";
+
+    }
+    console.log(text);
+
+    let text2 = "";
+    for (let i = 11; i < 20; i++) {
+      if (i == 5) { continue; }
+      text2 += "Number " + i + "\n";
+    }
+    console.log(text2);
+
+    let text3 = "";
+    const a = ["meena", "seema", "seenu", "heena"];
+    list: {
+      text3 += a[0] + "\n";
+      text3 += a[1] + "\n";
+      break list;
+      text3 += a[2] + "\n";
+      text3 += a[3] + "\n";
+    }
+    console.log(text3);
+
+  </script>
+
+</body>
+
+</html>

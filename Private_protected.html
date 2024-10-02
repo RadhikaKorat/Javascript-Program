@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrivateProtected</title>
+</head>
+
+<body>
+  <script>
+    // private variable
+
+    let obj = (
+      function () {
+        let fName = "";
+
+        return class {
+          constructor(name) {
+            fName = name;
+          }
+          getName() {
+            return fName;
+          }
+        }
+
+      }
+    )();
+
+
+    const lName = new obj("Malti");
+    console.log(lName.getName());
+    console.log(lName.fName);
+
+  </script>
+
+</body>
+
+</html>

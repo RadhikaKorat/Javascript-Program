@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromiseAPI</title>
+</head>
+
+<body>
+
+  <script>
+
+    let p1 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("promiseAPI 1");
+      }, 1000);
+    })
+
+    let p2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // resolve("promiseAPI 2")
+        resolve("promiseAPI 2");
+      }, 2000);
+    })
+
+    let p3 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("promiseAPI 3");
+      }, 3000);
+    })
+
+
+    let promiseAPI = Promise.all([p1, p2, p3]);
+    // let promiseAPI = Promise.allSettled([p1, p2, p3])
+    // let promiseAPI = Promise.race([p1, p2, p3]);
+    // let promiseAPI = Promise.any([p1, p2, p3]);
+    // let promiseAPI = Promise.resolve(2);
+    // let promiseAPI = Promise.reject(76);
+    promiseAPI
+      .then((value) => {
+        console.log(value);
+      })
+
+  </script>
+</body>
+
+</html>

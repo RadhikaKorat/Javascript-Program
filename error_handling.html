@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ErrorHandling</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    let a = prompt("Enter a number : ");
+
+    try {
+      if (a > 100) {
+        console.log("Try block executed");
+      }
+    } catch (error) {
+      if (error.a < 100) {
+        {
+          console.log("Catch block executed");
+        }
+
+      } else {
+        console.log("Catch Error block executed");
+      }
+    } finally {
+      console.log("Finally block executed");
+    }
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetTimeout&SetInterval</title>
+</head>
+
+<body>
+  <p id="time"></p>
+  <script>
+    // setTimeout(function () {
+    //   console.log("SettimeOut work (Code Executed after 2 seconds)");
+    // }, 2000);
+
+    // setInterval(function () {
+    //   console.log("SettimeInterval work (Code Executed every 2 seconds)");
+    // }, 2000);
+
+    setInterval(fun, 1000)
+    function fun() {
+      let d = new Date();
+
+      document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+      // console.log(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds())
+    }
+
+  </script>
+
+</body>
+
+</html>

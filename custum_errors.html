@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CustomError</title>
+</head>
+
+<body>
+  <script>
+
+
+
+    // class CheckCondition extends Error {
+    //   constructor(msg) {
+    //     super(msg);
+    //   }
+    // }
+
+    // try {
+    //   if (10 != 20)
+    //     throw new CheckCondition("10 is not equal to 20");
+    // }
+    // catch (err) {
+    //   console.error(err);
+    // }
+
+
+    function CheckCondition(msg = "") {
+      this.msg = msg;
+      this.name = "CheckCondition";
+    }
+    // CheckCondition.prototype = Error.prototype;
+
+    try {
+      if (10 != 20)
+        throw new CheckCondition("10 is not equal to 20");
+    }
+    catch (err) {
+      console.error(err);
+    }
+  </script>
+
+</body>
+
+</html>

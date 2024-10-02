@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixin</title>
+</head>
+
+<body>
+
+  <script>
+
+
+    const eat = {
+      isEating() {
+        return "I am Eating!!";
+      }
+    }
+    const run = {
+      isRunning() {
+        return "I am Running!!";
+      }
+    }
+
+    const on = {
+      isOn() {
+        return "I am not on/off";
+      }
+    }
+
+    let fun = Object.assign(eat, run, on);
+    console.log(fun.isEating().isRunning().isOn());
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallApplyBind</title>
+</head>
+
+<body>
+
+  <script>
+
+    // let obj = {
+    //   name: "cat",
+    //   say: function (msg) {
+    //     console.log("Hello " + this.name + "," + msg)
+    //   }
+    // }
+    // let obj2 = {
+    //   name: "Dog"
+    // }
+
+    // obj.say.call(obj2, "How are you");
+
+
+    let obj3 = {
+      name: "Dog",
+      say: function (msg, rest) {
+        console.log("Hello " + this.name + "," + msg + "," + rest);
+      }
+    }
+    obj = {
+      name: "Cat"
+    }
+
+    obj3.say.apply(obj, ["How are you?", "Are you ok!!"]);
+
+
+    let obj2 = {
+      name: "Dog",
+      say: function (msg) {
+        console.log("Hello " + this.name + "," + msg);
+      }
+    }
+    obj = {
+      name: "Cat"
+    }
+
+    let obj4 = obj2.say.bind(obj, ["How are you?", "Are you ok!!"]);
+    obj4();
+  </script>
+
+</body>
+
+</html>

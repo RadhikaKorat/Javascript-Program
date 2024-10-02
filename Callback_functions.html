@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallbackFunctions</title>
+</head>
+
+<body>
+  <!-- <button id="demo">Click me</button> -->
+
+  <script>
+
+    // function fun(call, callback) {
+    //   console.log("Hy, How are you? " + call + " @!!!");
+    //   callback();
+    // }
+
+    // function sun() {
+    //   console.log("GoodByy!!!");
+    // }
+    // setTimeout(fun("anj", sun), 3000);
+
+
+
+
+
+    // function cat() {
+    //   console.log("I am cat");
+    // }
+
+
+    // (function call(callback, name) {
+    //   console.log("I am called " + name);
+    //   setTimeout(() => {
+    //     console.log("I am called after 3 sec");
+    //     callback();
+    //   },
+    //     3000);
+
+    // })(cat, "hello");
+
+
+
+
+    // function clickOn() {
+    //   alert("Button was clicked");
+    // }
+
+
+    // let button = document.getElementById("demo");
+    // button.addEventListener("click", clickOn);
+
+
+    // function fetchData() {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve('Data fetched from the server');
+    //     }, 3000);
+    //   });
+    // }
+
+    // fetchData().then((data) => {
+    //   console.log(data);
+    // }).catch((error) => {
+    //   console.log('Error:', error);
+    // });
+
+
+
+    function task1(callback) {
+      setTimeout(() => {
+        console.log("Task 1 is completed");
+      }, 4000);
+      callback();
+    }
+    function task2(callback) {
+      setTimeout(() => {
+        console.log("Task 2 is completed");
+      }, 2000);
+      callback();
+    }
+
+    function task3(callback) {
+      setTimeout(() => {
+        console.log("Task 3 is completed");
+      }, 1000);
+      callback();
+    }
+
+    task1(() => {
+      task2(() => {
+        task3(() => {
+          console.log("All tasks are completed");
+        });
+      });
+    });
+
+
+
+  </script>
+
+
+</body>
+
+</html>

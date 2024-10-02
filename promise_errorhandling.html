@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromiseErrorHandling</title>
+</head>
+
+<body>
+  <script>
+
+    let myPromise = new Promise((resolve, reject) => {
+
+      let success = true;
+      if (success) {
+        resolve("Work Done");
+      } else {
+        reject("Work Not Done");
+      }
+
+    });
+
+    myPromise
+      .then((result) => console.log("Then statement : " + result))
+      .catch((error) => console.log("Caught Error : " + error))
+
+  </script>
+
+</body>
+
+</html>

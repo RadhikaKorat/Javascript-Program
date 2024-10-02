@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class</title>
+</head>
+
+<body>
+  <script>
+    class Car {
+      constructor(name, year) {
+        this.name = name;
+        this.year = year;
+      }
+      age(x) {
+        return x - this.year;
+      }
+    }
+    const date = new Date();
+    let year = date.getFullYear();
+    const myCar = new Car("Porsche", 1997);
+    console.log(myCar.age(year));
+  </script>
+</body>
+
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class inheritance</title>
+</head>
+
+<body>
+  <script>
+    class Animal {
+      constructor(name, action) {
+        this.name = name;
+        this.action = action;
+      }
+      cat() {
+        return "This is " + this.name;
+      }
+    }
+    class Dog extends Animal {
+      constructor(name, action, work) {
+        super(name, action);
+        this.work = work;
+      }
+      show() {
+        return this.cat() + ", it can " + this.action + " and work on " + this.work;
+      }
+    }
+    let animals = new Dog("Zalyyn", "eating", "running")
+    console.log(animals.show());
+  </script>
+
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>staticClass</title>
+</head>
+
+<body>
+
+  <script>
+    class Car {
+      constructor(name) {
+        this.name = name;
+
+      }
+
+      static brand(x) {
+        return "Porsche" + x.name;
+      }
+    }
+
+    const mayCar = new Car("Ferrari");
+    console.log(Car.brand(mayCar))
+  </script>
+
+</body>
+
+</html>

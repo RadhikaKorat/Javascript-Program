@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArgumentObject</title>
+</head>
+
+<body>
+  <script>
+
+    // Arguments Object
+
+    // let fun = function sun(a, b) {
+    //   console.log(arguments[1], arguments[0])
+    // }
+    // fun(10, 20)
+
+
+    // function parameters
+
+    // 1.Default parameters
+    // let fun = function para(a = 2, b = 4) {
+    //   return a * b;
+    // }
+
+    // console.log(fun(10, 1));
+    // console.log(fun(10));
+
+    // 2.Rest parameters
+
+    let fun = function para(...b) {
+      let sum = 0;
+      for (let total of b) { sum += total; }
+      return sum;
+
+
+    }
+    console.log(fun(10, 20, 30, 40, 50));
+
+
+
+  </script>
+
+</body>
+
+</html>
